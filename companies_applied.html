@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies Applied - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <div class="flex items-center justify-between bg-blue-500 p-4">
+            <h1 class="text-white text-xl mx-auto">Companies Applied</h1>
+            <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" id="logout-button">Logout</button>
+        </div>
+
+        <div class="flex flex-grow p-4">
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full">
+                <h2 class="text-2xl font-bold mb-4">List of Companies Applied</h2>
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 px-4 border-b text-left">Company Name</th>
+                            <th class="py-2 px-4 border-b text-left">Applied Date</th>
+                            <th class="py-2 px-4 border-b text-left">Interview Date</th>
+                            <th class="py-2 px-4 border-b text-left">Topics to Cover</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Google</td>
+                            <td class="py-2 px-4 border-b">2024-11-15</td>
+                            <td class="py-2 px-4 border-b">2025-01-20</td>
+                            <td class="py-2 px-4 border-b">Data Structures, Algorithms</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Salesforce</td>
+                            <td class="py-2 px-4 border-b">2024-12-20</td>
+                            <td class="py-2 px-4 border-b">2025-02-25</td>
+                            <td class="py-2 px-4 border-b">System Design, Databases</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Amazon</td>
+                            <td class="py-2 px-4 border-b">2024-11-25</td>
+                            <td class="py-2 px-4 border-b">2025-01-01</td>
+                            <td class="py-2 px-4 border-b">Web Development, APIs</td>
+                        </tr>
+                        <!-- Add more companies as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Logout functionality for the logout button
+        document.getElementById('logout-button').addEventListener('click', function() {
+            window.location.href = 'logout.html'; // Redirect to the logout page
+        });
+    </script>
+</body>
+</html>

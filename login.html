@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Log In</h2>
+        <form id="login-form">
+            <div class="mb-4">
+                <label class="block text-gray-700" for="login-username">Username/Email</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="login-username" required type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="login-password">Password</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="login-password" required type="password"/>
+            </div>
+            <div class="text-red-500 mb-4 hidden" id="login-error">Invalid username or password</div>
+            <button class="w-full bg-blue-500 text-white py-2 rounded-lg" type="submit">Log In</button>
+        </form>
+        <p class="mt-4 text-center">Don't have an account? <a class="text-blue-500" href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would typically validate the login credentials
+            // For this example, we'll just redirect to the dashboard
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

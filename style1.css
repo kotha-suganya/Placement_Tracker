@@ -1,0 +1,51 @@
+body{margin:0px; font-family:calibri; overflow-x:hidden;}
+.clear{clear:both}
+.header{width:100%; }
+.header_inner, .contact_inner, .gsd_inner, .services_inner, .project_inner, .testimonials_inner, .follow_inner, .footer_inner, .copyright_inner
+{ width:1060px; margin:0px auto; overflow:hidden;}
+.logo{ float:left}
+.menu{ float:right}
+.menu ul{
+        padding: 0;
+        list-style: none;
+        background: #f2f2f2;
+    }
+   .menu ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+  .menu ul li a{
+        display: block;
+        padding: 10px 35px;
+        color: #333;
+        text-decoration: none;
+    }
+    .menu ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+   .menu ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+   .menu ul li:hover ul.dropdown{
+        display: block; /* Display the dropdown */
+    }
+   .menu ul li ul.dropdown li{
+        display: block;
+    }
+    .banner
+    {
+        background-size:cover;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        place-items: center;
+   		width: 100%;
+    }

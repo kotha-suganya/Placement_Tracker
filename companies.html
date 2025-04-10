@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .company-logo {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .company-logo:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+     <!-- Navigation Bar -->
+     <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between">
+            <div class="text-white text-lg font-bold">Placement Tracker</div>
+            <div class="space-x-4">
+                <a href="index.htm" class="text-gray-300 hover:text-white">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-white">About</a>
+                <a href="dashboard.html.html" class="text-gray-300 hover:text-white">Services</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white">Contact Us</a>
+                <a href="logout.html" class="text-gray-300 hover:text-white">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4 text-center">Companies</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="flex flex-col items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQesjEVwtXATKjbYul6F5f6URCru9HZQg7fKhNsgZNG9n9DbqCG9IPqm5RqUdY1OjuKj0U&usqp=CAU" alt="Company 1" class="company-logo" onclick="showCompanyDetails('Company 1')"/>
+                <p class="mt-2">Company 1</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://static.vecteezy.com/system/resources/previews/028/274/080/non_2x/hcl-letter-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.jpg" alt="Company 2" class="company-logo" onclick="showCompanyDetails('Company 2')"/>
+                <p class="mt-2">Company 2</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" alt="Company 3" class="company-logo" onclick="showCompanyDetails('Company 3')"/>
+                <p class="mt-2">Company 3</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://e7.pngegg.com/pngimages/916/300/png-clipart-accenture-new-logo-icons-logos-emojis-iconic-brands.png" alt="Company 4" class="company-logo" onclick="showCompanyDetails('Company 4')"/>
+                <p class="mt-2">Company 4</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://i.pinimg.com/originals/89/0c/25/890c250fe129488a586b1a99e8b68107.png" alt="Company 5" class="company-logo" onclick="showCompanyDetails('Company 5')"/>
+                <p class="mt-2">Company 5</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Company 6" class="company-logo" onclick="showCompanyDetails('Company 6')"/>
+                <p class="mt-2">Company 6</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://1000logos.net/wp-content/uploads/2016/11/Cisco-logo.png" alt="Company 7" class="company-logo" onclick="showCompanyDetails('Company 7')"/>
+                <p class="mt-2">Company 7</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" alt="Company 8" class="company-logo" onclick="showCompanyDetails('Company 8')"/>
+                <p class="mt-2">Company 8</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://e7.pngegg.com/pngimages/506/329/png-clipart-logo-microsoft-corporation-product-brand-1080p-microsoft-logo-company-text.png" alt="Company 9" class="company-logo" onclick="showCompanyDetails('Company 9')"/>
+                <p class="mt-2">Company 9</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQw5WlazkzfxJ8s4mgM7Qg4Mu9POjKly9QvSMhj9gQLcxIpbJNT2vsQf5DRKKStHspBhA&usqp=CAU" alt="Company 10" class="company-logo" onclick="showCompanyDetails('Company 10')"/>
+                <p class="mt-2">Company 10</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://download.logo.wine/logo/Capgemini/Capgemini-Logo.wine.png" alt="Company 11" class="company-logo" onclick="showCompanyDetails('Company 11')"/>
+                <p class="mt-2">Company 11</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" alt="Company 12" class="company-logo" onclick="showCompanyDetails('Company 12')"/>
+                <p class="mt-2">Company 12</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSloBAYAYfD6pMs5BEtgfoALyacMl1hJQIq7v3Ym0DclzME8EN14x4e6dk93i07M9LfVA&usqp=CAU" alt="Company 13" class="company-logo" onclick="showCompanyDetails('Company 13')"/>
+                <p class="mt-2">Company 13</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKN00G83dmqjRvhEn3ss_fMBltLdOSTqUXtoHKQUxG_26-Som_B-leImuAm5DByQHj6C4&usqp=CAU" alt="Company 14" class="company-logo" onclick="showCompanyDetails('Company 14')"/>
+                <p class="mt-2">Company 14</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://blog.logomaster.ai/hs-fs/hubfs/ibm-logo-2.jpg?width=672&height=448&name=ibm-logo-2.jpg" alt="Company 15" class="company-logo" onclick="showCompanyDetails('Company 15')"/>
+                <p class="mt-2">Company 15</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://c8.alamy.com/comp/2RCW213/mnc-logo-mnc-letter-mnc-letter-logo-design-initials-mnc-logo-linked-with-circle-and-uppercase-monogram-logo-mnc-typography-for-technology-busines-2RCW213.jpg" alt="Company 16" class="company-logo" onclick="showCompanyDetails('Company 16')"/>
+                <p class="mt-2">Company 16</p>
+            </div>
+            
+        </div>
+
+        <!-- Company Details Modal -->
+        <div id="company-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/3">
+                <h2 id="modal-title" class="text-2xl font-bold mb-2"></h2>
+                <p id="modal-description" class="text-gray-700 mb-4"></p>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCompanyDetails(company) {
+            let title, description;
+
+            // Set company details based on the company clicked
+            switch (company) {
+                case 'Company 1':
+                    title = 'TCS';
+                    description = 'Tata Consultancy Services (TCS) is an Indian multinational technology company specializing in information technology services and consulting. Headquartered in Mumbai, it is a part of the Tata Group and operates in 150 locations across 46 countries. It is the second-largest Indian company by market capitalization.';
+                    break;
+                case 'Company 2':
+                    title = 'HCL';
+                    description = 'HCL Technologies Limited ( HCLTech) is an Indian multinational information technology (IT) consulting company headquartered in Noida, Uttar Pradesh. Founded by Shiv Nadar, it was spun out in 1991 when HCL entered into the software services business. The company has offices in 59 countries and over 220,000 employees.';
+                    break;
+                case 'Company 3':
+                    title = 'Wipro';
+                    description = 'Wipro Limited is an Indian multinational technology company based in Bengaluru. It provides information technology, consulting and business process services. It is one of the six leading Indian Big Tech companies. Its capabilities range across cloud computing, computer security, digital transformation, artificial intelligence, robotics, data analytics, and other technologies, servicing customers in 167 countries.';
+                    break;
+                case 'Company 4':
+                    title = 'Accenture';
+                    description = 'Accenture plc is a global multinational professional services company originating in the United States and headquartered in Dublin, Ireland, that specializes in information technology (IT) services and management consulting. A Fortune Global 500 company, it reported revenues of $64.9 billion in 2024.';
+                    break;
+                    case 'Company 5':
+                    title = 'Infosys';
+                    description = 'Infosys Limited is an Indian multinational technology company that offers business consulting, information technology, and outsourcing services. Founded in 1981, the company is headquartered in Bengaluru.';
+                    break;
+                case 'Company 6':
+                    title = 'Amazon';
+                    description = 'Amazon.com, Inc., doing business as Amazon (/ˈæməzɒn/, AM-ə-zon; UK also /ˈæməzən/, AM-ə-zən), is an American multinational technology company engaged in e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence. Founded in 1994 by Jeff Bezos in Bellevue, Washington, the company originally started as an online marketplace for books but gradually expanded its offerings to include a wide range of product categories, referred to as "The Everything Store"';
+                    break;
+                case 'Company 7':
+                    title = 'Cisco';
+                    description = 'Cisco Systems, Inc. (using the trademark Cisco) is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products. Cisco specializes in specific tech markets, such as the Internet of things (IoT), domain security, videoconferencing, and energy management with products including Webex, OpenDNS, Jabber, Duo Security, Silicon One, and Jasper.';
+                    break;
+                    case 'Company 8':
+                    title = 'Google';
+                    description = 'Google LLC (/ˈɡuːɡəl/ ⓘ, GOO-gəl) is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI). It has been referred to as "the most powerful company in the world" and is one of the  most valuable brands due to its market dominance, data collection, and technological advantages in the field of AI. its parent company, Alphabet Inc., is one of the five Big Tech companies, alongside Amazon, Apple, Meta, and Microsoft.';
+                    break;
+                    case 'Company 9':
+                    title = 'Microsoft';
+                    description = 'Microsoft Corporation is an American multinational technology conglomerate headquartered in Redmond, Washington. Founded in 1975, the company became highly influential in the rise of personal computers through software like Windows, and the company has since expanded to Internet services, cloud computing, video gaming and other fields. Microsoft is the largest software maker, one of the most valuable public U.S. companies,[a] and one of the most valuable brands globally.';
+                    break;
+                    case 'Company 10':
+                    title = 'Salesforce';
+                    description = 'Salesforce, Inc. is an American cloud-based software company headquartered in San Francisco, California. It provides applications focused on sales, customer service, marketing automation, e-commerce, analytics, artificial intelligence, and application development';
+                    break;
+                    case 'Company 11':
+                    title = 'Capgemini';
+                    description = 'Capgemini SE is a French multinational information technology (IT) services and consulting company, headquartered in Paris, France';
+                    break;
+                    case 'Company 12':
+                    title = 'Facebook';
+                    description = 'Meta Platforms, Inc., doing business as Meta, and formerly named Facebook, Inc., and TheFacebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California. The company owns and operates Facebook, Instagram, Threads, and WhatsApp, among other products and services. Advertising accounts for 97.8 percent of its revenue. Originally known as the parent company of the Facebook service, as Facebook, Inc., it was rebranded to its current name in 2021 to "reflect its focus on building the metaverse", an integrated environment linking the company products and services.';
+                    break;
+                    case 'Company 13':
+                    title = 'Drawinbox';
+                    description = 'Darwin Technologies Ltd., known simply as Darwin (formerly Thomsons Online Benefits) is a global benefits management and employee engagement software company that also provides consultancy services related to reward, workplace pensions and employee benefit programmes. With offices in London, Singapore and Cluj, Romania, the firm employs over 700 staff';
+                    break;
+                    case 'Company 14':
+                    title = 'highradius';
+                    description = 'Radius Inc. was an American computer hardware firm founded in May 1986 by Burrell Smith, Mike Boich, Matt Carter, Alain Rossmann and joined by other members of the original Macintosh team like Andy Hertzfeld. The company specialized in Macintosh peripherals and accessory equipment';
+                    break;
+                    case 'Company 15':
+                    title = 'IBM';
+                    description = 'International Business Machines Corporation (using the trademark IBM), nicknamed Big Blue, is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. It is a publicly traded company and one of the 30 companies in the Dow Jones Industrial Average. IBM is the largest industrial research organization in the world, with 19 research facilities across a dozen countries, having held the record for most annual U.S. patents generated by a business for 29 consecutive years from 1993 to 2021.';
+                    break;
+                    case 'Company 16':
+                    title = 'MNC';
+                    description = 'A multi-national corporation (MNC; also called a multi-national enterprise (MNE), trans-national enterprise (TNE), trans-national corporation (TNC), international corporation, or state less corporation) is a corporate organization that owns and controls the production of goods or services in at least one country other than its home country. Control is considered an important aspect of an MNC to distinguish it from international portfolio investment organizations';
+                    break;
+                default:
+                    title = 'Unknown Company';
+                    description = 'No details available for this company.';
+            }
+
+            // Set the modal content
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+
+            // Show the modal
+            document.getElementById('company-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('company-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

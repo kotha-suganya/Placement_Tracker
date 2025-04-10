@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Welcome to Placement Tracker</h2>
+        <form id="signup-form">
+            <div class="mb-4">
+                <label class="block text-gray-700" for="name">Name</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="name" required type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="username">Username/Email</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="username" required type="email"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="password">Password</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="password" required type="password"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="confirm-password">Confirm Password</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="confirm-password" required type="password"/>
+            </div>
+            <div class="text-red-500 mb-4 hidden" id="signup-error">Passwords do not match</div>
+            <button class="w-full bg-blue-500 text-white py-2 rounded-lg" type="submit">Sign Up</button>
+        </form>
+        <p class="mt-4 text-center">Already have an account? <a class="text-blue-500" href="login.html">Log In</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                document.getElementById('signup-error').classList.remove('hidden');
+            } else {
+                // Redirect to personal details page
+                window.location.href = 'details.html';
+            }
+        });
+    </script>
+</body>
+</html>

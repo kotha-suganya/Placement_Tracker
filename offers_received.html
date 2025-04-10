@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers Received - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <div class="flex items-center justify-between bg-blue-500 p-4">
+            <h1 class="text-white text-xl mx-auto">Offers Received</h1>
+            <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" id="logout-button">Logout</button>
+        </div>
+
+        <div class="flex flex-grow p-4">
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full">
+                <h2 class="text-2xl font-bold mb-4">List of Job Offers Received</h2>
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 px-4 border-b text-left">Company Name</th>
+                            <th class="py-2 px-4 border-b text-left">Job Title</th>
+                            <th class="py-2 px-4 border-b text-left">Description</th>
+                            <th class="py-2 px-4 border-b text-left">Joining Date</th>
+                            <th class="py-2 px-4 border-b text-left">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border-b">accenture</td>
+                            <td class="py-2 px-4 border-b">Software Engineer</td>
+                            <td class="py-2 px-4 border-b">Develop and maintain software applications.</td>
+                            <td class="py-2 px-4 border-b">2025-05-01</td>
+                            <td class="py-2 px-4 border-b">New York, NY</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Wipro</td>
+                            <td class="py-2 px-4 border-b">Data Analyst</td>
+                            <td class="py-2 px-4 border-b">Analyze data and provide insights for decision making.</td>
+                            <td class="py-2 px-4 border-b">2025-04-15</td>
+                            <td class="py-2 px-4 border-b">Mumbai, India</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Infosys</td>
+                            <td class="py-2 px-4 border-b">Web Developer</td>
+                            <td class="py-2 px-4 border-b">Build and maintain websites and web applications.</td>
+                            <td class="py-2 px-4 border-b">2025-03-01</td>
+                            <td class="py-2 px-4 border-b">Hyderabad, India</td>
+                        </tr>
+                        <!-- Add more offers as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Logout functionality for the logout button
+        document.getElementById('logout-button').addEventListener('click', function() {
+            window.location.href = 'logout.html'; // Redirect to the logout page
+        });
+    </script>
+</body>
+</html>

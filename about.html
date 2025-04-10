@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .content-container {
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between">
+            <div class="text-white text-lg font-bold">Placement Tracker</div>
+            <div class="space-x-4">
+                <a href="index.htm" class="text-gray-300 hover:text-white">Home</a>
+                <a href="dashboard.html" class="text-gray-300 hover:text-white">Services</a>
+                <a href="companies.html" class="text-gray-300 hover:text-white">Our Companies</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white">Contact Us</a>
+                <a href="logout.html" class="text-gray-300 hover:text-white">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h1 class="text-3xl font-bold mb-4 text-center">About Placement Tracker</h1>
+        <p class="text-gray-700 mb-4">
+            <b>
+            Placement Tracker is a comprehensive web application designed to assist students and job seekers in their journey towards securing job placements. Our platform provides a user-friendly interface that allows users to manage their job applications, track their progress, and prepare for interviews effectively.
+            </b>
+        </p>
+        <h2 class="text-2xl font-semibold mb-2">Key Features</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li><strong>User Registration:</strong> Create an account to access personalized features.</li>
+            <li><strong>Profile Management:</strong> Fill in personal and educational details to enhance your profile.</li>
+            <li><strong>Job Application Tracking:</strong> Keep track of companies you have applied to and their statuses.</li>
+            <li><strong>Interview Preparation:</strong> Access resources and topics to prepare for interviews with various companies.</li>
+            <li><strong>Progress Tracking:</strong> Visualize your application progress and receive recommendations for companies.</li>
+            <li><strong>Contact Support:</strong> Reach out to our support team for any assistance you may need.</li>
+        </ul>
+        <h2 class="text-2xl font-semibold mb-2">How It Works</h2>
+        <p class="text-gray-700 mb-4"><b>
+            To get started, simply sign up for an account and fill in your personal and educational details. Once your profile is set up, you can begin applying for jobs and tracking your applications. The dashboard provides an overview of your progress, including companies applied to, offers received, and recommended companies based on your profile.</b>
+        </p>
+        <h2 class="text-2xl font-semibold mb-2">Our Mission</h2>
+        <p class="text-gray-700 mb-4">
+            <b>
+            Our mission is to empower job seekers by providing them with the tools and resources they need to succeed in their job search. We aim to simplify the application process and enhance the overall experience for users as they navigate the competitive job market.
+            </b>
+        </p>
+        <h2 class="text-2xl font-semibold mb-2">Uses of the Placements Tracker</h2>
+        <p class="text-gray-700 mb-4"><b>
+            This tracker can be used in multiple ways:
+            Self-Assessment, 
+            Job Applications, 
+            Professional Development, 
+            Networking and Mentoring.
+        </b>
+        </p>
+    </div>
+</body>
+</html>

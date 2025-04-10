@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom styles for the pie chart */
+        #overallProgressChart {
+            max-width: 300px; /* Set a maximum width */
+            max-height: 300px; /* Set a maximum height */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4 text-center">Progress Tracker</h1>
+
+        <!-- Overall Progress Pie Chart -->
+        <div class="mb-8 flex justify-center">
+            <h2 class="text-2xl font-semibold mb-2 text-center">Overall Progress</h2>
+            <canvas id="overallProgressChart" width="300" height="300"></canvas>
+        </div>
+
+        <!-- Programming Languages Progress -->
+        <h2 class="text-2xl font-semibold mb-2 text-center">Programming Languages Progress</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                <div class="w-full bg-gray-200 rounded-full">
+                    <div class="bg-blue-500 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style="width: 80%">80%</div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Python</h3>
+                <div class="w-full bg-gray-200 rounded-full">
+                    <div class="bg-green-500 text-xs font-medium text-green-100 text-center p-1 leading-none rounded-full" style="width: 70%">70%</div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Java</h3>
+                <div class="w-full bg-gray-200 rounded-full">
+                    <div class="bg-red-500 text-xs font-medium text-red-100 text-center p-1 leading-none rounded-full" style="width: 60%">60%</div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-2">C++</h3>
+                <div class="w-full bg-gray-200 rounded-full">
+                    <div class="bg-purple-500 text-xs font-medium text-purple-100 text-center p-1 leading-none rounded-full" style="width: 50%">50%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Overall Progress Pie Chart
+        const ctx = document.getElementById('overallProgressChart').getContext('2d');
+        const overallProgressChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Completed', 'In Progress', 'Not Started'],
+                datasets: [{
+                    label: 'Overall Progress',
+                    data: [40, 50, 10], // Example data: 40% completed, 50% in progress, 10% not started
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Overall Progress'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles for the hamburger menu */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .line {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <div class="flex items-center justify-between bg-blue-500 p-4">
+            <div class="flex items-center">
+                <div class="hamburger" id="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <h1 class="text-white text-xl mx-auto">Placement Tracker</h1> <!-- Centered Title -->
+            <div class="relative">
+                <button class="text-white text-2xl" id="profile-toggle">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
+            <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" id="logout-button">Logout</button>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 mt-12 w-48 bg-white rounded-lg shadow-lg hidden" id="dropdown-menu">
+            <a class="block px-4 py-2 text-gray-700" href="index.htm">Home</a>
+            <a class="block px-4 py-2 text-gray-700" href="about.html">About</a>
+            <a class="block px-4 py-2 text-gray-700" href="companies.html">Companies</a>
+            <a class="block px-4 py-2 text-gray-700" href="contact.html">Contact</a>
+            <a class="block px-4 py-2 text-gray-700" href="progress.html">Progress</a>
+            <div class="border-t my-2"></div> <!-- Divider -->
+            <a class="block px-4 py-2 text-gray-700" href="profile.html">Profile</a>
+        </div>
+
+        <div class="flex flex-grow p-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <a href="companies_applied.html" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg mb-2 block text-center">
+                        Companies Applied
+                    </a>
+                    <p class="text-gray-700"><b>This functionality allows users to maintain a centralized record of all the companies they have applied to. It captures essential details such as the company's name, the date of application submission,interview date and topics to cover in order to get into the respective company.A clear indication of the organization to which the application was submitted. This helps users easily identify and prioritize applications based on interest or reputation.Knowing the timeline is vital for follow-ups and gauging whether the company has taken an unusually long time to respond.And also knowing about the topics to prepare will encourage us to prepare well for the interview.</b></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <a href="recommended_companies.html" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg mb-2 block text-center">
+                        Recommended Companies
+                    </a>
+                    <p class="text-gray-700"><b>When you explore these tailored recommendations, the system takes into account a variety of factors to ensure accuracy and relevance. Your skills—whether technical, creative, or soft—form the foundation of these suggestions.Interests also play a significant role in the recommendation process. This personalized exploration tool is designed with user convenience in mind. It eliminates the need for endless browsing and guesswork, allowing you to focus on quality over quantity. By directing your attention to companies that truly align with your profile, it saves time and reduces the frustration often associated with job hunting.</b></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <a href="offers_received.html" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg mb-2 block text-center">
+                        Offers Received
+                    </a>
+                    <p class="text-gray-700"><b>When you view the offers you have received, the system provides an organized and comprehensive display of key details. Each offer includes information about the role you’ve been selected for, such as the job title, department, and responsibilities. This helps you understand the scope of work and the expectations associated with the position, allowing you to assess whether the role aligns with your skills, interests, and long-term career goals.One of the most valuable aspects of this functionality is its ability to compare multiple offers side by side. This eliminates the need to manually compile information and simplifies the process of weighing the pros and cons of each option. </b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle dropdown menu visibility
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('dropdown-menu').classList.toggle('hidden');
+        });
+
+        // Toggle profile menu visibility
+        document.getElementById('profile-toggle').addEventListener('click', function() {
+            document.getElementById('profile-menu').classList.toggle('hidden');
+        });
+
+// Logout functionality for the logout button
+document.getElementById('logout-button').addEventListener('click', function() {
+    window.location.href = 'logout.html'; // Redirect to the logout page
+});
+</script>
+</body>
+</html>

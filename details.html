@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details - Placement Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Personal and Educational Details</h2>
+        <form id="details-form">
+            <div class="mb-4">
+                <label class="block text-gray-700" for="first-name">First Name</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="first-name" required type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="last-name">Last Name</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="last-name" required type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="gender">Gender</label>
+                <select class="w-full px-3 py-2 border rounded-lg" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="profession">Current Profession</label>
+                <select class="w-full px-3 py-2 border rounded-lg" id="profession" required>
+                    <option value="">Select Profession</option>
+                    <option value="student">Student</option>
+                    <option value="employee">Working Professional</option>
+                </select>
+            </div>
+            <div class="mb-4 hidden" id="student-details">
+                <label class="block text-gray-700" for="institution">Institution Name</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="institution" type="text"/>
+                <label class="block text-gray-700 mt-4" for="year">Year of Study</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="year" type="text"/>
+            </div>
+            <div class="mb-4 hidden" id="employee-details">
+                <label class="block text-gray-700" for="company">Company Name</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="company" type="text"/>
+                <label class="block text-gray-700 mt-4" for="post">Post</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="post" type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="skills">Skills</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="skills" required type="text"/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="interests">Interests</label>
+                <input class="w-full px-3 py-2 border rounded-lg" id="interests" required type="text"/>
+            </div>
+            <button class="w-full bg-blue-500 text-white py-2 rounded-lg" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('profession').addEventListener('change', function() {
+            const profession = this.value;
+            if (profession === 'student') {
+                document.getElementById('student-details').classList.remove('hidden');
+                document.getElementById('employee-details').classList.add('hidden');
+            } else if (profession === 'employee') {
+                document.getElementById('student-details').classList.add('hidden');
+                document.getElementById('employee-details').classList.remove('hidden');
+            } else {
+                document.getElementById('student-details').classList.add('hidden');
+                document.getElementById('employee-details').classList.add('hidden');
+            }
+        });
+
+        document.getElementById('details-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Redirect to login page
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

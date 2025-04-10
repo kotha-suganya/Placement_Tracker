@@ -1,0 +1,60 @@
+/* CSS Document */
+body{margin:0px; font-family:calibri; overflow-x:hidden;}
+.clear{clear:both}
+.header{width:100%; }
+.header_inner, .contact_inner, .gsd_inner, .services_inner, .project_inner, .testimonials_inner, .follow_inner, .footer_inner, .copyright_inner
+{ width:1060px; margin:0px auto; overflow:hidden;}
+.logo{ float:left}
+.menu{ float:right}
+.menu ul, .menu2 ul{ list-style:none; margin:0px; padding:0px;}
+.menu ul li{ float:left; padding:35px 20px;}
+.menu ul li a{ text-decoration:none; color:#000000;}
+.menu ul li:hover{ background:#B5D4E9;}
+.contact{ background:#0B70B8;}
+.text{ width:70%; float:left}
+.text h2{ color:#FFC258;}
+.text p{color:#FFFFFF; text-align:justify;}
+.button{width:30%; float:right;}
+.button_inner{ position:relative; top:60px; left:60%;}
+.button a{ text-decoration:none; color:#000000; background:#FFFFFF; padding:15px 20px; border-radius:5px;}
+.gsd_inner h1, .services_inner h1{ text-align:center; margin-top:50px;}
+.gsd_inner span, .services_inner span{ color:#0B70B6;}
+.gsd_inner p{ text-align:justify; margin:30px 15px;}
+.services{ background:#F2F2F2; width:100%;}
+.service_block{width:25%; margin-top:20px; margin-bottom:50px; float:left;}
+.service{ background:#031426; padding:10px; margin:5px;}
+.service h3{color:#FFC258; text-align:center; margin-top:70px;}
+.service p{ color:#FFFFFF;}
+.service h6{ color:#68ABF9; text-align:center; font-size:16px;}
+.service_block img{ position:relative; top:45px; left:80px;}
+.project{overflow:hidden; width:100%; background:#1C2C3C;}
+.project_block1{width:50%; float:left;}
+.project_block1 h1{ color:#FFFFFF; margin:50px 0px 50px 0px;}
+.project_block2{width:50%; float:right}
+.image img{ float:left; margin:10px 0px;}
+.image{ margin-top:50px; margin-bottom:50px;}
+.image a{ color:#000000; background:#fff; text-decoration:none; text-align:center; padding:10px; position:relative; top:30px; left:225px; border-radius:5px;}
+.project_block2 h1 { color:#FFFFFF; position:relative; top:120px; left:30px;}
+.project_block2 p{ color:#FFFFFF;  position:relative; top:120px; left:30px;}
+.project_block2 span{ color:#FFBE43;}
+.project_block2 a{ color:#000000; background:#fff; border-radius:5px; position:relative; top:150px; left:30px; padding:10px; text-decoration:none;}
+.testimonials{ background-image:url(../images/test.jpg); overflow:hidden;}
+.testimonials_inner h1{ text-align:center; color:#FFFFFF; padding:30px 20px;}
+.testimonials_inner p{ color:#FFFFFF; padding:20px; text-align:justify}
+.testimonials_inner h6{text-align:center; color:#FFBE43; font-size:16px; padding-bottom:20px; }
+.follow{ width:100%;}
+.follow_inner h1{ float:left; padding:70px; position:relative; left:250px; font-size:36px}
+.follow_inner span{ color:#0D6FB8;}
+.follow_inner a img{ position:relative; top:95px; left:200px; margin:0px 3px;}
+.footer{ background:#22222A;}
+.footer_block1, .footer_block2{ width:33%; float:left;}
+.footer_block1 img{ padding:50px 0px 10px 0px;}
+.footer_block1 p, .footer_block3 p{ color:#FFFFFF; padding:5px;}
+.footer_block1 a img{ position:relative; top:-40px; margin:0px 3px;}
+.footer_block2 h1{ color:#FFFFFF;  padding:50px 0px 10px 0px; margin-left:35px;}
+.menu2 ul li{ float:left; padding:5px 35px;}
+.menu2 ul li a{ text-decoration:none; color:#FFFFFF; font-size:18px;}
+.footer_block3 h1{ color:#FFFFFF;  padding:50px 0px 10px 0px;}
+.copyright{ background:#1D1C22; overflow:hidden}
+.copyright_inner p{ text-align:center; color:#8B9597; padding:5px;}
+.copyright_inner span{ color:#FFFFFF;}
